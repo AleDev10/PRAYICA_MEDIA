@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media de um aluno</title>
+    <style>
+        body {
+            background-color: rgb(114, 114, 114);
+            font: normal 16px arial;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        #div1 {
+            display: flex;
+            justify-content: center;
+        }
+        #div2 {
+            background-color: #ffdb0f;
+            width: 300px;
+            border-radius: 10px;
+            height: 650px;
+            display: inline-block;
+            #p1d2 {
+            margin-left: 5px;
+            }
+            #aluno {
+            margin-left: 5px;
+            position: relative;
+            bottom: 13px;
+            border-radius: 5px;
+            }
+            #p2d2{
+                margin-left: 5px;
+            }
+            #curso{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #p3d2{
+                margin-left: 5px;
+            }
+            #classe{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #p4d2{
+                margin-left: 5px;
+            }
+            #disciplina{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #p5d2{
+                margin-left: 5px;
+            }
+            #mac{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #p6d2{
+                margin-left: 5px;
+            }
+            #pp{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #p7d2{
+                margin-left: 5px;
+            }
+            #pt{
+                margin-left: 5px;
+                position: relative;
+                bottom: 13px;
+                border-radius: 5px;
+            }
+            #div1_1 {
+                text-align: center;
+                position: relative;
+                top: 10px;
+                #enviart{
+                    width: 250px;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+        #div3 {
+            background-color: #ffdb0f;
+            width: 300px;
+            position: relative;
+            
+            height: 650px;
+            margin-left: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            #p1d3, #p2d3, #p3d3, #p4d3, #p5d3, #p6d3, #p7d3, #p8d3 {
+                margin-left: 5px;
+            }
+        }
+        h2{
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>CALCULO DE MEDIA</h1>
+    <div id="div1">
+        <div id="div2">
+        <h2>INSERIR INFORMAÇÕES</h2>
+        <P id="p1d2"><strong>NOME DO ALUNO</strong></P>
+        <input type="text" name="aluno" id="aluno">
+        <p id="p2d2"><STRONg>CURSO</STRONg></p>
+        <input type="text" name="curso" id="curso">
+        <p id="p3d2"><strong>CLASSE</strong></p>
+        <input type="number" name="classe" id="classe">
+        <p id="p4d2"><strong>DISCIPLINA</strong></p>
+        <input type="text" name="disciplina" id="disciplina">
+        <p id="p5d2"><strong>MAC</strong></p>
+        <input type="number" name="mac" id="mac">
+        <p id="p6d2"><strong>PROVA DO PROFESSOR</strong></p>
+        <input type="number" name="pp" id="pp">
+        <p id="p7d2"><strong>PROVA TRIMESTRAL</strong></p>
+        <input type="number" name="pt" id="pt">
+        <div id="div1_1">
+            <input type="button" value="ENVIAR" onclick="enviar()" id="enviart">
+        </div>
+        </div>
+        <div id="div3">
+        <h2>INFORMAÇÕES</h2>
+        <p id="p1d3">:</p>
+        <p id="p2d3">:</p>
+        <p id="p3d3">:</p>
+        <p id="p4d3">:</p>
+        <p id="p5d3">:</p>
+        <p id="p6d3">:</p>
+        <p id="p7d3">:</p>
+        <p id="p8d3">:</p>
+
+        </div>
+    </div>
+    <script>
+        function enviar(){
+            var nome1 = window.document.getElementById('aluno')
+            var curso1 = window.document.getElementById('curso')
+            var classe1 = window.document.getElementById('classe')
+            var disciplina1 = window.document.getElementById('disciplina')
+            var mac1 = window.document.getElementById('mac')
+            var pp1 = window.document.getElementById('pp')
+            var pt1 = window.document.getElementById('pt')
+
+            var nome2 = window.document.getElementById('p1d3')
+            var curso2 = window.document.getElementById('p2d3')
+            var classe2 = window.document.getElementById('p3d3')
+            var disciplina2 = window.document.getElementById('p4d3')
+            var mac2 = window.document.getElementById('p5d3')
+            var pp2 = window.document.getElementById('p6d3')
+            var pt2 = window.document.getElementById('p7d3')
+            var m1 = window.document.getElementById('p8d3')
+
+            var nome3 = nome1.value
+            var curso3 = curso1.valueS
+            var classe3 = Number(classe1.value)
+            var disciplina3 = disciplina.value
+            var mac3 = Number(mac1.value)
+            var pp3 = Number(pp1.value)
+            var pt3 = Number(pt1.value)
+            var m3 = (mac3+pp3+pt3)/3
+
+            nome2.innerHTML = `<strong>NOME DO ALUNO:</strong> ${nome3}`
+            curso2.innerHTML = `<strong>CURSO DO ALUNO:</strong> ${curso3} `
+            classe2.innerHTML = `<strong>CLASSE:</strong> ${classe3}ª`
+            disciplina2.innerHTML = `<strong>DISCIPLINA:</strong> ${disciplina3}`
+            mac2.innerHTML = `<strong>MAC:</strong> ${mac3}`
+            pp2.innerHTML = `<strong>PROVADO PROFESSOR:</strong> ${pp3}` 
+            pt2.innerHTML = `<strong>PROVA TRIMESTRAL:</strong> ${pt3}`
+            m1.innerHTML = `<strong>MÉDIA:</strong>${m3}`
+
+
+        }
+    </script>
+</body>
+</html>
